@@ -1,0 +1,124 @@
+# Set the default behavior, in case people don't have core.autocrlf set.
+* text=auto
+
+# Explicitly declare text files you want to always be normalized and converted
+# to native line endings on checkout.
+*.txt text
+
+# Declare files that will always have CRLF line endings on checkout.
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.csproj text eol=crlf
+*.def text eol=crlf
+*.dsp text eol=crlf
+*.dsw text eol=crlf
+*.filters text eol=crlf
+*.MAK text eol=crlf
+*.mak text eol=crlf
+*.props text eol=crlf
+*.rc text eol=crlf
+*.rc2 text eol=crlf
+*.sln text eol=crlf
+*.vcproj text eol=crlf
+*.vcxitems text eol=crlf
+*.vcxproj text eol=crlf
+*.vdproj text eol=crlf
+*.wmk text eol=crlf
+
+Makefile text eol=lf
+*.sh text eol=lf
+
+# Denote all files that are truly binary and should not be modified.
+*.3ds binary 
+*.APJ binary
+*.Lib binary
+*.MCM binary
+*.MPP binary
+*.a binary
+*.aif binary
+*.aiff binary 
+*.apj binary
+*.arc binary 
+*.arj binary 
+*.asf binary 
+*.avi binary 
+# .bas can contain binary data so list as binary:
+*.bas binary
+*.bin binary
+*.bmp binary
+*.class binary 
+*.com binary 
+*.component binary
+*.cpt binary
+*.dat binary 
+*.dll binary 
+*.doc binary
+*.docx binary
+*.dpj binary
+*.dxe binary
+*.eps binary
+*.exe binary
+*.flc binary 
+*.fli binary 
+*.fmm binary
+*.frx binary 
+*.gif binary 
+*.gz binary
+*.icns binary
+*.ico binary 
+*.iff binary 
+*.jar binary 
+*.jpg binary
+*.lbr binary
+*.lha binary 
+*.lib binary
+*.lwo binary 
+*.lws binary 
+*.lzh binary 
+*.max binary 
+*.mcm binary
+*.mcp binary
+*.mda binary
+*.mdp binary
+*.mov binary 
+*.mp2 binary
+*.mp3 binary
+*.mpg binary 
+*.mpp binary
+*.nib binary
+*.o binary
+*.obj binary 
+*.p binary 
+*.pcm binary
+*.pct binary
+*.pdf binary
+*.pmsp binary
+*.png binary 
+*.ppt binary
+*.pptx binary
+*.prj binary
+*.psd binary 
+*.qdat binary
+*.rar binary
+*.rsr binary
+*.rsrc binary
+# rtf can contain binary data with \bin tag, so list it:
+*.rtf binary
+*.smk binary 
+*.so binary
+*.swf binary 
+*.tar binary 
+*.tga binary 
+*.tgz binary
+*.tif binary
+*.tiff binary 
+*.vcp binary
+*.vct binary
+*.vcw binary
+*.wad binary 
+*.wav binary
+*.xSYM binary
+*.xls binary
+*.xlsx binary
+*.zip binary
+
