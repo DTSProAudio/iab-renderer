@@ -54,8 +54,8 @@ namespace CommonStream
 
         ReturnCode write(const void *buf, uint32_t nbytes);
         BitCount_t tellp() const;
-        ReturnCode seekp(std::ios_base::streampos pos);
-        ReturnCode seekp(std::ios_base::streamoff offs, std::ios_base::seekdir way);
+        ReturnCode seekp(std::streampos pos);
+        ReturnCode seekp(std::streamoff offs, std::ios_base::seekdir way);
     };
 
 }   // namespace CommonStream

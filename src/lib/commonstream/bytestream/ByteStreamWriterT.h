@@ -76,12 +76,12 @@ namespace CommonStream
         ReturnCode Init(unsigned char *iBuffer, ByteCount_t iBufferLength);
         ReturnCode Init(const ByteStreamWriterT<StreamType> &bs2);
 
-        std::ios_base::streampos streamPosition() const
+        std::streampos streamPosition() const
         {
             return stream_->tellp();
         }
         
-        std::ios_base::streampos streamPosition(std::ios_base::streampos sp)
+        std::streampos streamPosition(std::streampos sp)
         {
             return stream_->seekp(sp);
         }

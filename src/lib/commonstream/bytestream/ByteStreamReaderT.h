@@ -129,12 +129,12 @@ namespace CommonStream
         ReturnCode Init(const ByteStreamReaderT<StreamType> &bs2);
         ByteStreamReaderT<StreamType> &operator=(const ByteStreamReaderT<StreamType> &bs2);
 
-        std::ios_base::streampos streamPosition() const
+        std::streampos streamPosition() const
         {
             return stream_->tellg();
         }
         
-        std::ios_base::streampos streamPosition(std::ios_base::streampos sp)
+        std::streampos streamPosition(std::streampos sp)
         {
             return stream_->seekg(sp);
         }

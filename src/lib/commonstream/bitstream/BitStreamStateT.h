@@ -53,12 +53,12 @@ namespace CommonStream
             return streamState_ = st;
         }
 
-        std::ios_base::streampos streamPosition() const
+        std::streampos streamPosition() const
         {
             return streamPosition_;
         }
         
-        std::ios_base::streampos streamPosition(std::ios_base::streampos sp)
+        std::streampos streamPosition(std::streampos sp)
         {
             return streamPosition_ = sp;
         }
@@ -125,7 +125,7 @@ namespace CommonStream
 
     protected:
         std::ios_base::iostate      streamState_;
-        std::ios_base::streampos    streamPosition_;
+        std::streampos    streamPosition_;
 
         int32_t                     bitBufferFill_;
         uint8_t                     bitBuffer_;
