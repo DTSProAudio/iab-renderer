@@ -31,7 +31,7 @@
 #include <string>
 
 #if defined(_WIN32) && _MSC_VER >= 1600
-#include <cvt/wstring>
+//#include <cvt/wstring>
 #include <codecvt>
 #endif
 

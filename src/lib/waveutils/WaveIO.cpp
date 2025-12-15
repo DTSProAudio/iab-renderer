@@ -430,10 +430,10 @@ bool ParseBasicWAVHeader(std::fstream& file, wavFileTraits& traits)
     headsize = file.read(reinterpret_cast<char*>(&iffHead), sizeof(IFFHEAD)).gcount();
     
     if ( iffHead.group != wavhelp_groupID )
-        return 0;
+        return false;
     
     if ( iffHead.riff != wavhelp_riffType )
-        return 0;
+        return false;
     
     // Hunt down the wave header
     
@@ -456,12 +456,12 @@ bool ParseBasicWAVHeader(std::fstream& file, wavFileTraits& traits)
     }
     
     if ( wavHead.chunkID != wavhelp_formatID )
-        return 0;
+        return false;
     
     // Hrm, is the file too short to contain any data
     
     if ( headsize < sizeof(IFFHEAD) || wavsize < sizeof(WAVHEAD) )
-        return 0;
+        return false;
     
     // Is it bigger than we expected?
     
@@ -493,9 +493,9 @@ bool ParseBasicWAVHeader(std::fstream& file, wavFileTraits& traits)
     }
     
     if ( sndHead.chunkID != wavhelp_dataID )
-        return 0;
+        return false;
     
-    traits.audioBegin_ = (unsigned int)(headsize+wavsize+sndsize+offsettowavehead + offsettosndhead);
+    traits.audioBegin_ = static_cast<unsigned int>(headsize + wavsize + sndsize + offsettowavehead + offsettosndhead);
     
     // Where does the audio data end
     

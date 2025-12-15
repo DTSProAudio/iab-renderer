@@ -89,13 +89,13 @@ namespace CommonStream
         return RawStream::tell();
     }
 
-    ReturnCode RawOStream::seekp(std::ios_base::streampos pos)
+    ReturnCode RawOStream::seekp(std::streampos pos)
     {
         BitCount_t bpos = static_cast<BitCount_t>(pos);
         return RawStream::seek(bpos);
     }
 
-    ReturnCode RawOStream::seekp(std::ios_base::streamoff offs, std::ios_base::seekdir way)
+    ReturnCode RawOStream::seekp(std::streamoff offs, std::ios_base::seekdir way)
     {
         SBitCount_t boffs = static_cast<SBitCount_t>(offs);
         return RawStream::seek(boffs, way);

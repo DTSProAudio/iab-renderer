@@ -641,8 +641,8 @@ namespace ImmersiveAudioBitstream
         }
         
         // Skip the element body
-        std::ios_base::streampos currentPosition = streamReader.streamPosition();
-        streamReader.streamPosition(currentPosition + static_cast<std::ios_base::streampos>(parsedElementSize));
+        std::streampos currentPosition = streamReader.streamPosition();
+        streamReader.streamPosition(currentPosition + static_cast<std::streampos>(parsedElementSize));
 
         return kIABNoError;
     }
@@ -8987,7 +8987,7 @@ namespace ImmersiveAudioBitstream
 		Plex<8> plex8Field = 0;
 
 		// Save stream position before reading for audioDataID_
-		std::ios_base::streampos positionAtStart;
+		std::streampos positionAtStart;
 		positionAtStart = streamReader.streamPosition();
 
 		// Read audio data ID
@@ -8999,7 +8999,7 @@ namespace ImmersiveAudioBitstream
 		audioDataID_ = static_cast<IABAudioDataIDType>(plex8Field);
 
 		// Calculating number of PCM sample bytes from parsed "elementSize_"
-		std::ios_base::streampos positionCurrent = streamReader.streamPosition();
+		std::streampos positionCurrent = streamReader.streamPosition();
 		uint64_t audioIDBytes = static_cast<uint64_t>(positionCurrent - positionAtStart);
 		uint64_t pcmSampleBytesLength = static_cast<uint64_t>(elementSize_ - audioIDBytes);
 

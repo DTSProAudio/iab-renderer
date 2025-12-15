@@ -33,7 +33,7 @@
 #include <exception>
 #include <sstream>
 #include <istream>
-#include <iostream>
+#include <ios>
 #include <climits>
 #include <cstdio>
 
@@ -77,14 +77,14 @@ namespace CommonStream
 
         ~BitStreamWriterT();
 
-        std::ios_base::streampos streamPosition() const
+        std::streampos streamPosition() const
         {
-            return stream_->tellg();
+            return stream_->tellp();
         }
         
-        std::ios_base::streampos streamPosition(std::ios_base::streampos sp)
+        std::streampos streamPosition(std::streampos sp)
         {
-            return stream_->seekg(sp);
+            return stream_->seekp(sp);
         }
 
         ReturnCode write(bool iVal);
